@@ -58,7 +58,6 @@ console.log(x);
 // comparison operators;
 console.log(ageJones > ageSarah);
 console.log(ageSarah >= 18);
-*/
 
 const currentYear = 2037;
 const ageJones = currentYear - 1991;
@@ -72,3 +71,43 @@ console.log(x, y);
 
 const averageAge = (ageJones + ageSarah) / 2;
 console.log(ageJones, ageSarah, averageAge);
+
+
+
+const firstName = 'Jonas';
+const job = 'teacher';
+const birthYear = 1991;
+const currentYear = 2037;
+
+const jonas = "I'm " + firstName + ', a ' + (currentYear - birthYear) + " years old " + job + '!';
+
+console.log(jonas);
+
+const jonasNew = `I'm ${firstName} a ${currentYear - birthYear} years old ${job}!`;
+
+console.log(jonasNew)
+
+*/
+
+
+const age = 15;
+
+
+if(age >= 18) {
+    console.log('Sarah can start driving license 👌')
+
+} else {
+    const yearsLeft = 18 - age;
+    console.log(`Sarah is too young. wait another ${yearsLeft} years :)`);
+}
+
+
+const birthYear = 1991;
+let century;
+if (birthYear <= 2000){
+    century = 20;
+}else {
+    century = 21;
+}
+
+console.log(`you were born in the ${century}th century`)

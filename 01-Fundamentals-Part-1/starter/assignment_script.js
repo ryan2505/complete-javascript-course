@@ -35,4 +35,10 @@ const avgCountryPopulation = 33;
 console.log(population < avgCountryPopulation);
 
 console.log(country + " is in " + continent + " ,and its " + population +" million people speak " + language);
-*/ 
+
+// Lecture Assignment: String and Template Literals
+
+const description = `${country} is in ${continent}, and its ${population} million people speak ${language}`;
+console.log(description);
+
+*/
