@@ -87,7 +87,7 @@ const jonasNew = `I'm ${firstName} a ${currentYear - birthYear} years old ${job}
 
 console.log(jonasNew)
 
-*/
+
 
 
 const age = 15;
@@ -111,3 +111,20 @@ if (birthYear <= 2000){
 }
 
 console.log(`you were born in the ${century}th century`)
+
+*/
+
+// type conversion
+const inputYear = '1991';
+console.log(Number(inputYear));
+console.log(Number(inputYear) + 18);
+
+console.log(String(23));
+
+// type coercion
+console.log('I am ' + 23 +" years old")
+console.log('23' + '10' - 3);
+
+let n = '1' + 1
+n = n-1
+console.log(n)

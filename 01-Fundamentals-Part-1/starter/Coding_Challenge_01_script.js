@@ -40,12 +40,20 @@ console.log("Johns BMI for Data 1 is "+JohnBMIData1);
 
 let markHigherBMIData1 = markBMIData1 > JohnBMIData1;
 
-console.log("Does Mark have a higher BMI than John?: "+ markHigherBMIData1);
+// console.log("Does Mark have a higher BMI than John?: "+ markHigherBMIData1);
+
+
+if (markBMIData1 > JohnBMIData1){
+    console.log(`Mark's BMI (${markBMIData1}) is higher than John's! (${JohnBMIData1})`)
+} else {
+    console.log(`John's BMI (${JohnBMIData1}) is higher than Mark's! (${markBMIData1})`)
+}
 
 const markWeightData2 = 95;
 const markHeightData2 = 1.88;
 const JohnWeightData2 = 85;
 const JohnHeightData2 = 1.76;
+
 
 console.log("TEST DATA 2:")
 let markBMIData2 = markWeightData2 / markHeightData2 ** 2;
@@ -55,4 +63,27 @@ console.log("Johns BMI for Data 2 is "+JohnBMIData2);
 
 let markHigherBMIData2 = markBMIData2 > JohnBMIData2;
 
-console.log("Does Mark have a higher BMI than John?: "+ markHigherBMIData2);
+// console.log("Does Mark have a higher BMI than John?: "+ markHigherBMIData2);
+
+
+// Coding Challenge #2
+
+/*
+Use the BMI example from Challenge #1, and the code you already wrote, and
+improve it.
+
+Your tasks:
+1. Print a nice output to the console, saying who has the higher BMI. The message
+is either "Mark's BMI is higher than John's!" or "John's BMI is higher than Mark's!"
+
+2. Use a template literal to include the BMI values in the outputs. Example: "Mark's
+BMI (28.3) is higher than John's (23.9)!"
+
+Hint: Use an if/else statement 
+GOOD LUCK  */
+
+if (markBMIData2 > JohnBMIData2){
+    console.log(`Mark's BMI (${markBMIData2}) is higher than John's! (${JohnBMIData2})`)
+} else {
+    console.log(`John's BMI (${JohnBMIData2}) is higher than Mark's! (${markBMIData2})`)
+}

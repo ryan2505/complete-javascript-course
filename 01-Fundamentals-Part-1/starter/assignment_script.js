@@ -41,4 +41,13 @@ console.log(country + " is in " + continent + " ,and its " + population +" milli
 const description = `${country} is in ${continent}, and its ${population} million people speak ${language}`;
 console.log(description);
 
+
+// Lecture Assignment: Taking Decisions: if / else statements
+
+if (population > avgCountryPopulation) {
+    console.log(`${country}'s population is above average.`)
+} else {
+    console.log(`${country}'s population is ${avgCountryPopulation-population} million below average`)
+}
+
 */
