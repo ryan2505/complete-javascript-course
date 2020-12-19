@@ -3,14 +3,14 @@
 /*
 const country = "USA";
 const continent = "North America";
-let population = 328.2;
+let population = 328;
 
 console.log(country)
 console.log(continent)
 console.log(population)
 
 // Lecture Assignment: Data Types
-const isIsland = true;
+const isIsland = false;
 let language
 
 console.log(typeof isIsland);
@@ -53,7 +53,7 @@ if (population > avgCountryPopulation) {
 
 // Lecture Assignment: Type Conversion and Coercion
 
-*/
+
 /*
 1. Predict the result of these 5 operations without executing them:
 '9' - '5'; // 4
@@ -62,5 +62,57 @@ if (population > avgCountryPopulation) {
 '123' < 57; // false
 5 + 6 + '4' + 9 - 4 - 2; //1143
 2. Execute the operations to check if you were right
+
+*/
+
+// Lecture Assignment: Equality Operators: == vs ===
+
+// let numNeighbours = Number(prompt("How many neighbour countries does your country have?"));
+
+// if (numNeighbours === 1){
+//     console.log('Only 1 border!')
+// } else if (numNeighbours > 1){
+//     console.log('more than 1 border')
+// }else {
+//     console.log('No borders')
+// }
+
+
+// Lecture Assignment: Logical Operators
+
+/*
+if ((language === "English") && isIsland && (population < 50)){ // "english" is case sensitive here
+    console.log('You should live in USA :)')
+} else {
+    console.log('USA does not meet your criteria :(')
+}
+
+
+
+// Lecture Assignment: The switch statement
+
+const language = 'arabic'
+
+switch (language) {
+    case 'chinese':
+    case 'mandarin':
+        console.log('MOST number of native speakers!');
+        break;
+    case 'spanish':
+        console.log('2nd place in number of native speakers');
+        break;
+    case 'english':
+        console.log('3rd place');
+        break;
+    case 'hindi':
+        console.log('Number 4');
+        break;
+    case 'arabic':
+        console.log('5th most spoken language');
+        break;
+    default:
+        console.log('great language too :D')
+
+}
 
 */
