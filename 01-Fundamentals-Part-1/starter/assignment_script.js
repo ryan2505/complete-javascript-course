@@ -1,4 +1,3 @@
-
 // Lecture Assignment: Values and Variables
 /*
 const country = "USA";
@@ -77,7 +76,6 @@ if (population > avgCountryPopulation) {
 //     console.log('No borders')
 // }
 
-
 // Lecture Assignment: Logical Operators
 
 /*
@@ -115,4 +113,13 @@ switch (language) {
 
 }
 
+*/
+/*
+// Lecture Assignment: The Conditional (Ternary) Operator
+
+const population = 328;
+
+console.log(
+  `USA's population is ${population > 33 ? "above" : "below"} average`
+);
 */
