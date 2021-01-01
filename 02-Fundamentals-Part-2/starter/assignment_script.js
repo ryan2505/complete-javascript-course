@@ -50,4 +50,63 @@ const italypopulation3 = percentageOfWorld3(60);
 console.log(`${argentinapopulation3}%`);
 console.log(`${greecepopulation3}%`);
 console.log(`${italypopulation3}%`);
+
+
+//LECTURE: Introduction to Arrays
+
+const populations = [45, 10, 60, 328];
+
+if (populations.length >= 4) {
+  console.log("there are 4 countries");
+} else {
+  console.log("there is less then 4 countries");
+}
+
+function percentageOfWorld1(population) {
+  // world population is 7.594 billion as of 2018
+  return (population / 7594) * 100;
+}
+
+console.log(percentageOfWorld1(populations[0]));
+console.log(percentageOfWorld1(populations[1]));
+console.log(percentageOfWorld1(populations[2]));
+console.log(percentageOfWorld1(populations[3]));
+
+
+//LECTURE: Basic Array Operations (Methods)
+
+//country is china
+const neighbours = ["North Korea", "Mongolia", "Nepal"];
+
+console.log(neighbours);
+
+neighbours.push("Utopia");
+console.log(neighbours);
+
+neighbours.pop();
+console.log(neighbours);
+
+if (!neighbours.includes("Germany")) {
+  console.log("Probably not a central European country :D");
+} else {
+  console.log("is this a centeral European country?");
+}
+
+if (neighbours.includes("Mongolia")) {
+  const location = neighbours.indexOf("Mongolia");
+  neighbours[location] = "Vietnam";
+}
+
+console.log(neighbours);
+
 */
+
+//LECTURE: Introduction to Objects
+
+const myCountry = {
+  country: "China",
+  capital: "Beijing",
+  language: "Mandarin",
+  population: 1393,
+  neighbours: ["North Korea", "Mongolia", "Nepal"],
+};
