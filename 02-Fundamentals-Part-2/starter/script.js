@@ -158,7 +158,7 @@ if (friends.includes("Steven")) {
   console.log("you have a friend named steven");
 }
 
-*/
+
 //normal array
 const jonasArray = ["Jonas", "Schmedtmann", 2037 - 1991, "teacher", ["Michael", "Peter", "Steven"]];
 
@@ -199,3 +199,45 @@ console.log(jonas);
 console.log(
   `${jonas.firstName} has ${jonas.friends.length} friends, and his best friend is called ${jonas.friends[0]}`
 );
+
+
+const jonas = {
+  firstName: "jonas",
+  lastName: "Schmedtmann",
+  birthYear: 1991,
+  job: "teacher",
+  friends: ["Michael", "Peter", "Steven"],
+  hasDriversLicense: true,
+  // calcAge: function () {
+  //   return 2037 - this.birthYear;
+  calcAge: function () {
+    this.age = 2037 - this.birthYear;
+    return this.age;
+  },
+  getSummary: function () {
+    return `${this.firstName} is a ${this.calcAge()}-year old ${this.job}, and he has ${
+      this.hasDriversLicense ? "a" : "no"
+    } driver license`;
+  },
+};
+
+jonas.calcAge();
+console.log(jonas.age);
+
+//Challenge
+//'jonas is a 46-year old teacher, and he has a/no driver License'
+//if false should say "and he has no driver license"
+
+console.log(
+  `${jonas.firstName} is a ${jonas.age}-year old ${jonas.job}, and he has ${
+    jonas.hasDriversLicense ? "a" : "no"
+  } driver license`
+);
+
+console.log(jonas.getSummary());
+*/
+
+// for loop keeps running while condition is TRUE
+for (let rep = 1; rep <= 10; rep++) {
+  console.log(`Lifting weights repetition ${rep}`);
+}

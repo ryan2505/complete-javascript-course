@@ -99,7 +99,7 @@ if (neighbours.includes("Mongolia")) {
 
 console.log(neighbours);
 
-*/
+
 
 //LECTURE: Introduction to Objects
 
@@ -109,4 +109,26 @@ const myCountry = {
   language: "Mandarin",
   population: 1393,
   neighbours: ["North Korea", "Mongolia", "Nepal"],
+  describe: function () {
+    return `${this.country} has ${this.population} million ${this.language}-speaking people, ${this.neighbours.length} neighbouring countries and a capital called ${this.capital}.`;
+  },
+  checkIsland: function () {
+    return (this.isIsland = this.neighbours.length === 0 ? true : false);
+  },
 };
+
+//LECTURE: Dot vs. Bracket Notation
+
+console.log(
+  `${myCountry.country} has ${myCountry["population"] - 2} million ${myCountry.language}-speaking people, ${
+    myCountry.neighbours.length
+  } neighbouring countries and a capital called ${myCountry.capital}.`
+);
+
+//LECTURE: Object Methods
+
+console.log(myCountry.describe());
+
+console.log(myCountry.checkIsland());
+console.log(myCountry.isIsland);
+*/
