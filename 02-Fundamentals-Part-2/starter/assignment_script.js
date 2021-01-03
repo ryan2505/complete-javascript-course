@@ -131,4 +131,11 @@ console.log(myCountry.describe());
 
 console.log(myCountry.checkIsland());
 console.log(myCountry.isIsland);
+
+
+//LECTURE: Iteration: The for Loop
+
+for (let people = 1; people <= 50; people++) {
+  console.log(`Voter number ${people} is currently voting`);
+}
 */

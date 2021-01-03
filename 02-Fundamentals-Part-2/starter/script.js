@@ -235,9 +235,48 @@ console.log(
 );
 
 console.log(jonas.getSummary());
-*/
+
 
 // for loop keeps running while condition is TRUE
 for (let rep = 1; rep <= 10; rep++) {
   console.log(`Lifting weights repetition ${rep}`);
+}
+
+*/
+
+const jonasArray = ["Jonas", "Schmedtmann", 2037 - 1991, "teacher", ["Michael", "Peter", "Steven"], true];
+
+const types = [];
+
+for (let i = 0; i < jonasArray.length; i++) {
+  //reading from jonas array
+  console.log(jonasArray[i]);
+  // filling types array
+  //types[i] = typeof jonasArray[i];
+  types.push(typeof jonasArray[i]);
+}
+
+console.log(types);
+
+const years = [1991, 2007, 1969, 2020];
+const ages = [];
+
+for (let i = 0; i < years.length; i++) {
+  ages.push(2037 - years[i]);
+}
+
+console.log(ages);
+
+// continue and break
+
+console.log("--- ONLY STRINGS---");
+for (let i = 0; i < jonasArray.length; i++) {
+  if (typeof jonasArray[i] !== "string") continue;
+  console.log(jonasArray[i], typeof jonasArray[i]);
+}
+
+console.log("--- BREAK WITH NUMBER---");
+for (let i = 0; i < jonasArray.length; i++) {
+  if (typeof jonasArray[i] === "number") break;
+  console.log(jonasArray[i], typeof jonasArray[i]);
 }
