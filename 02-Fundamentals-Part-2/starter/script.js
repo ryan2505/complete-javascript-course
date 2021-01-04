@@ -242,7 +242,7 @@ for (let rep = 1; rep <= 10; rep++) {
   console.log(`Lifting weights repetition ${rep}`);
 }
 
-*/
+
 
 const jonasArray = ["Jonas", "Schmedtmann", 2037 - 1991, "teacher", ["Michael", "Peter", "Steven"], true];
 
@@ -279,4 +279,18 @@ console.log("--- BREAK WITH NUMBER---");
 for (let i = 0; i < jonasArray.length; i++) {
   if (typeof jonasArray[i] === "number") break;
   console.log(jonasArray[i], typeof jonasArray[i]);
+}
+*/
+
+const jonas = ["Jonas", "Schmedtmann", 2037 - 1991, "teacher", ["Michael", "Peter", "Steven"]];
+
+for (let i = jonas.length - 1; i >= 0; i--) {
+  console.log(jonas[i]);
+}
+
+for (let exercise = 1; exercise <= 3; exercise++) {
+  console.log(`-------starting exercise ${exercise}`);
+  for (let repetition = 1; repetition < 6; repetition++) {
+    console.log(`starting rep ${repetition}`);
+  }
 }
