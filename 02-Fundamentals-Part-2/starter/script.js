@@ -280,7 +280,7 @@ for (let i = 0; i < jonasArray.length; i++) {
   if (typeof jonasArray[i] === "number") break;
   console.log(jonasArray[i], typeof jonasArray[i]);
 }
-*/
+
 
 const jonas = ["Jonas", "Schmedtmann", 2037 - 1991, "teacher", ["Michael", "Peter", "Steven"]];
 
@@ -294,3 +294,23 @@ for (let exercise = 1; exercise <= 3; exercise++) {
     console.log(`starting rep ${repetition}`);
   }
 }
+
+
+// for (let rep = 1; rep <= 10; rep++) {
+//   console.log(`Lifting weights repetition ${rep}`);
+// }
+
+let rep = 1;
+while (rep <= 10) {
+  //console.log(`Lifting weights repetition ${rep}`);
+  rep++;
+}
+
+let dice = Math.trunc(Math.random() * 6) + 1;
+
+while (dice !== 6) {
+  console.log(`you rolled a ${dice}`);
+  dice = Math.trunc(Math.random() * 6) + 1;
+}
+
+*/

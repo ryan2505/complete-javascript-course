@@ -138,4 +138,52 @@ console.log(myCountry.isIsland);
 for (let people = 1; people <= 50; people++) {
   console.log(`Voter number ${people} is currently voting`);
 }
+
+
+//LECTURE: Looping Arrays, Breaking and Continuing
+
+function percentageOfWorld1(population) {
+  // world population is 7.594 billion as of 2018
+  return (population / 7594) * 100;
+}
+
+const populations = [45, 10, 60, 328];
+
+const percentage2 = [
+  percentageOfWorld1(populations[0]),
+  percentageOfWorld1(populations[1]),
+  percentageOfWorld1(populations[2]),
+  percentageOfWorld1(populations[3]),
+];
+
+console.log(percentage2);
+
+
+//LECTURE: Looping Backwards and Loops in Loops
+
+const listOfNeighbours = [["Canada", "Mexico"], ["Spain"], ["Norway", "Sweden", "Russia"]];
+
+for (let i = 0; i < listOfNeighbours.length; i++) {
+  for (let j = 0; j < listOfNeighbours[i].length; j++) {
+    console.log(listOfNeighbours[i][j]);
+  }
+}
 */
+
+//LECTURE: The while loop
+
+function percentageOfWorld1(population) {
+  // world population is 7.594 billion as of 2018
+  return (population / 7594) * 100;
+}
+
+const populations = [45, 10, 60, 328];
+const percentage3 = [];
+
+let x = 0;
+while (x < populations.length) {
+  percentage3.push(percentageOfWorld1(populations[x]));
+  x += 1;
+}
+
+console.log(percentage3);
