@@ -66,7 +66,7 @@ function calcTempAmplitudeNew(t1, t2) {
   return findArrayMax(temps) - findArrayMin(temps);
 }
 console.log(calcTempAmplitudeNew(temperatures, [35, 2, 3, 1]));
-*/
+
 
 function measureKelvin() {
   const measurement = {
@@ -88,3 +88,5 @@ function measureKelvin() {
 console.log(measureKelvin());
 
 // using a debugger
+
+*/
