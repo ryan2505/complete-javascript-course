@@ -78,3 +78,24 @@ btnHold.addEventListener('click', function () {
     }
   }
 });
+
+btnNew.addEventListener('click', function () {
+  //reset variables
+  gamePlaying = true;
+  currentScore = 0;
+  scores[0] = 0;
+  scores[1] = 0;
+  activePlayer = 0;
+  //reset html
+  current0Element.textContent = 0;
+  current1Element.textContent = 0;
+  score0Element.textContent = 0;
+  score1Element.textContent = 0;
+  //hide dice
+  diceElement.classList.add('hidden');
+  // reset styling
+  player0Element.classList.remove('player--winner');
+  player1Element.classList.remove('player--winner');
+  player0Element.classList.add('player--active');
+  player1Element.classList.remove('player--active');
+});
