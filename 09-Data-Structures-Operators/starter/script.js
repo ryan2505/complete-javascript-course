@@ -53,6 +53,107 @@ const restaurant = {
 };
 
 /*
+//////////////////////convert objects to maps data structure
+const question = new Map([
+  ['question', 'What is the best programming language in the world?'],
+  [1, 'C'],
+  [2, 'Java'],
+  [3, 'Javascript'],
+  ['correct', 3],
+  [true, 'Correct 🎉'],
+  [false, 'Try Again!'],
+]);
+
+
+//convert object to map
+const hoursMap = new Map(Object.entries(openingHours));
+
+console.log(hoursMap);
+//Quiz app
+console.log(question.get('question'));
+for (const [key, value] of question) {
+  if (typeof key === 'number') {
+    console.log(`option ${key}: ${value}`);
+  }
+}
+// const personAnswer = Number(prompt('What option?'));
+const personAnswer = 3;
+
+console.log(question.get(personAnswer === question.get('correct')));
+
+//convert map back to array
+
+console.log([...question]);
+console.log(question.keys());
+*/
+
+/*
+/////////////////////map fundamentals - data structure
+const rest = new Map();
+rest.set('name', 'Classico Italiano');
+
+rest.set(1, 'Firenze, Italy');
+rest.set(2, 'Lisbon, portugal');
+
+rest
+  .set('categories', ['Italian', 'Pizzeria', 'Vegetarian', 'Organic'])
+  .set('open', 11)
+  .set('close', 23)
+  .set(true, 'we are open :D')
+  .set(false, 'we are closed :(');
+
+console.log(rest.get('name'));
+console.log(rest.get(true));
+
+const time = 21; //9pm
+console.log(rest.get(time > rest.get('open') && time < rest.get('close')));
+
+console.log(rest.has('name'));
+rest.delete(2);
+console.log(rest);
+console.log(rest.size);
+
+rest.set([1, 2], 'Test');
+console.log(rest);
+
+console.log(rest.get([1, 2]));
+
+rest.set(document.querySelector('h1'), 'Heading');
+console.log(rest);
+*/
+/*
+//////////////////sets data structure
+const orderSet = new Set([
+  'pasta',
+  'pizza',
+  'pizza',
+  'risotto',
+  'pasta',
+  'pizza',
+]);
+
+console.log(orderSet);
+
+console.log(new Set('Jonas'));
+
+console.log(orderSet.size);
+console.log(orderSet.has('pizza'));
+orderSet.add('Garlic Bread');
+
+for (const order of orderSet) console.log(order);
+
+//Example
+
+const staff = ['Waiter', 'Chef', 'Waiter', 'Manager', 'Chef', 'Waiter'];
+const staffUnique = [...new Set(staff)];
+
+console.log(staffUnique);
+
+console.log(
+  new Set(['Waiter', 'Chef', 'Waiter', 'Manager', 'Chef', 'Waiter']).size
+);
+*/
+/*
 ///////////////////////Enhanced object literals
 //property NAMES
 const properties = Object.keys(openingHours);
