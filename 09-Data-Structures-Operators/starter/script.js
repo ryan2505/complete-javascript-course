@@ -61,6 +61,18 @@ const flights =
 //   🔴 Delayed Arrival from HEL to FAO (12h05)
 //            Departure from FAO to LIS (12h30)
 
+for (const flight of flights.split('+')) {
+  const [type, from, to, time] = flight.split(';');
+  console.log(
+    `${type.startsWith('_Delayed') ? '🔴' : ''}${type.replaceAll(
+      '_',
+      ' '
+    )} from ${from.slice(0, 3).toUpperCase()} to ${to
+      .slice(0, 3)
+      .toUpperCase()} (${time.replace(':', 'h')})`.padStart(46) // default pad is space ' '
+  );
+}
+
 /*
 //////sting methods
 
