@@ -78,7 +78,13 @@ class App {
   #workout = [];
 
   constructor() {
+    // Get user's position
     this._getPosition(); // calls load map
+
+    // Get data from local storage
+    this._getLocalStorage();
+
+    // Attach Event handlers
     form.addEventListener('submit', this._newWorkout.bind(this));
     inputType.addEventListener('change', this._toggleElevationField);
     containerWorkouts.addEventListener('click', this._moveToPopup.bind(this));
@@ -108,6 +114,12 @@ class App {
 
     // handling clicks on map
     this.#map.on('click', this._showForm.bind(this));
+
+    // loads data from local storage if its there
+    this.#workout.forEach(work => {
+      // needs to be called in load map because markers cant be added without map being loaded
+      this._renderWorkoutMarker(work);
+    });
   }
 
   _showForm(mapE) {
@@ -192,6 +204,9 @@ class App {
 
     //hide form + clear input fields
     this._hideForm();
+
+    // Set local storage to all workouts
+    this._setLocalStorage();
   }
 
   _renderWorkoutMarker(workout) {
@@ -278,7 +293,42 @@ class App {
     });
 
     // using the public interface
-    workout.click();
+    // workout.click();
+  }
+
+  _setLocalStorage() {
+    // local storage can get checked in the application tab under local storage
+    // local storage is an API in the browser like DOM
+    localStorage.setItem('workouts', JSON.stringify(this.#workout)); // stored as a string with JSON.stringify
+    // local storage is a very simple API and should only be used for small amounts of data
+    // because local storage uses "blocking" (taught in next section)
+
+    // destroys the prototype chain because string --> object
+  }
+
+  _getLocalStorage() {
+    // use key to retrieve it back
+    const data = JSON.parse(localStorage.getItem('workouts'));
+    // local storage is a string, JSON.parse converts it back to a object
+    console.log(data);
+
+    // guard clause
+    if (!data) return;
+
+    // restore the data into workouts array
+    this.#workout = data;
+
+    this.#workout.forEach(work => {
+      this._renderWorkout(work);
+    });
+  }
+
+  reset() {
+    // clears the workouts local storage
+    localStorage.removeItem('workouts');
+
+    // location is a big object with one method to reload the page
+    location.reload();
   }
 }
 
