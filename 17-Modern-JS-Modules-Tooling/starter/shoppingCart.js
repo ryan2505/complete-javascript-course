@@ -1,6 +1,6 @@
 // exporting module
-console.log('Exporting module')
-
+// console.log('Exporting module')
+/*
 // variables declared in a module are scoped to the module
 // they are private to this script
 // normal scripts would put these in the global scope and 
@@ -8,8 +8,8 @@ console.log('Exporting module')
 // if we wanted to use these variables in other scripts we need to export them
 // in modules there are two types of exports
 // named export = export in front of the varible
-const shippingCost = 10;
-export const cart = []
+// const shippingCost = 10;
+// export const cart = []
 
 // this is a named export
 // exports always need to be in top level code - cant be in a if block for example
@@ -33,4 +33,6 @@ export {totalPrice, totalQuantity as qt};
 export default function(product, quantity) {
     cart.push({product, quantity})
     console.log(`${quantity} ${product} added to cart`)
-} 
+} */
+
+
