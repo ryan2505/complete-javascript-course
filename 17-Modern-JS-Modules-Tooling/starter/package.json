@@ -4,12 +4,20 @@
   "description": "",
   "main": "script.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
+    "stop": "parcel -t node"
   },
   "author": "Ryan",
   "license": "ISC",
   "dependencies": {
+    "core-js": "^3.15.1",
     "leaflet": "^1.7.1",
-    "lodash-es": "^4.17.21"
+    "lodash-es": "^4.17.21",
+    "regenerator-runtime": "^0.13.7",
+    "sudo": "^1.0.3"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.3"
   }
 }
