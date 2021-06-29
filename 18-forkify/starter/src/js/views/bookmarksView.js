@@ -11,6 +11,11 @@ class BookmarksView extends View {
     this._message = '';
   }
 
+  addHandlerLocalStorageBookmarkRender(handler) {
+    // required for first bookmark load from local storage
+    window.addEventListener('load', handler);
+  }
+
   // generate HTML, same name as other views so parent View class can use render method on it
   _generateMarkup() {
     // will return a string instead of rendering to DOM
