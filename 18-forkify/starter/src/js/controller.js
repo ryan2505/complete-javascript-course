@@ -4,6 +4,7 @@ import searchView from './views/searchView.js'; // load our view class instance
 import resultsView from './views/resultsView.js'; // load our view class instance
 import paginationView from './views/paginationView.js'; // load our view class instance
 import bookmarksView from './views/bookmarksView.js'; // load our view class instance
+import addRecipeView from './views/addRecipeView.js'; // load our view class instance
 
 // polyfilling all es6 code
 import 'core-js/stable';
@@ -137,6 +138,14 @@ const controlBookmarks = function () {
 };
 
 /////////////////////////
+// Uploading new recipe
+/////////////////////////
+
+const controlAddRecipe = function (newRecipe) {
+  console.log(newRecipe);
+};
+
+/////////////////////////
 // INIT
 /////////////////////////
 const init = function () {
@@ -147,5 +156,6 @@ const init = function () {
   recipeView.addHandlerAddBookmark(controlAddBookmark);
   searchView.addHandlerSearch(controlSearchResults);
   paginationView.addHandlerClick(controlPagination);
+  addRecipeView.addHandlerUpload(controlAddRecipe);
 };
 init();
