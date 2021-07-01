@@ -10,6 +10,8 @@ class AddRecipeView extends View {
     this._btnOpen = document.querySelector('.nav__btn--add-recipe');
     this._btnClose = document.querySelector('.btn--close-modal');
 
+    this._message = 'Recipe was successfully uploaded ✨';
+
     // no controller needed for this but still need to import into controller
     // if its not imported, the module would never get ran by the bundler
     this._addHandlerShowWindow();

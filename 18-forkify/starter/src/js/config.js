@@ -8,3 +8,9 @@ export const TIMEOUT_SEC = 10;
 
 // per search result page
 export const RESULTS_PER_PAGE = 15;
+
+// API key generated once per hour on https://forkify-api.herokuapp.com/v2
+export const KEY = 'aad72325-2a30-41e3-9fd9-858866ea2c81';
+
+// Time we wait till we close modal
+export const MODAL_CLOSE_SEC = 2.5;

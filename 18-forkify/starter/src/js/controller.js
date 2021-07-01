@@ -5,6 +5,7 @@ import resultsView from './views/resultsView.js'; // load our view class instanc
 import paginationView from './views/paginationView.js'; // load our view class instance
 import bookmarksView from './views/bookmarksView.js'; // load our view class instance
 import addRecipeView from './views/addRecipeView.js'; // load our view class instance
+import { MODAL_CLOSE_SEC } from './config.js';
 
 // polyfilling all es6 code
 import 'core-js/stable';
@@ -141,8 +142,42 @@ const controlBookmarks = function () {
 // Uploading new recipe
 /////////////////////////
 
-const controlAddRecipe = function (newRecipe) {
-  console.log(newRecipe);
+// function needs to be async to use await to catch the error from the async function of model.uploadRecipe(newRecipe)
+// by having await JS will pass the thrown error correctly
+const controlAddRecipe = async function (newRecipe) {
+  try {
+    // show loading spinner
+    addRecipeView.renderSpinner();
+
+    await model.uploadRecipe(newRecipe);
+
+    // Render recipe
+    recipeView.render(model.state.recipe);
+
+    // Close form window
+    // setTimeout for leaving modal window open in time for success message to play
+    setTimeout(function () {
+      addRecipeView.toggleWindow();
+    }, MODAL_CLOSE_SEC * 1000);
+
+    // Display success message
+    addRecipeView.renderMessage();
+
+    // render bookmark
+    bookmarksView.render(model.state.bookmarks);
+
+    // Change ID in URL
+    // history API, pushState() lets us change the URL without reloading the page
+    // pushState() takes 3 arguments (state, title, url)
+    window.history.pushState(null, '', `#${model.state.recipe.id}`);
+
+    // history API can go back and forth in the browser alos
+    // history.back() to go to previous page
+  } catch (err) {
+    console.error(err, '💣');
+
+    addRecipeView.renderError(err.message);
+  }
 };
 
 /////////////////////////
